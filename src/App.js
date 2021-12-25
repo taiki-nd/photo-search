@@ -38,7 +38,14 @@ const App = () => {
             value={text}/>
           <Btn type="submit" onClick={onClickSearch}>search...</Btn>
         </Form>
+
+        {images < 1 ? 
+
+        <LetSearch>検索してください</LetSearch>
         
+        :
+        <>
+        <LetSearch>{query}の検索結果</LetSearch>
         <Photos>
           {images.map(image => (
             <Card key={image.id}>
@@ -47,6 +54,11 @@ const App = () => {
             </Card>
           ))}
         </Photos>
+        </>
+
+        }
+
+
       </Content>
     </>
   );
@@ -73,6 +85,12 @@ const Btn = styled.button`
   :hover{
     background-color: #ccc;
   }
+`
+
+const LetSearch = styled.p`
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 `
 
 const Content = styled.div`
