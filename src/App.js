@@ -52,6 +52,24 @@ const App = () => {
   );
 }
 
+const Form = styled.div`
+  width: fit-content;
+  margin: 25px auto;
+`
+
+const InputSearch = styled.input`
+  width: 600px;
+  padding: 10px;
+  margin: 0 10px;
+`
+
+const Btn = styled.button`
+  padding: 10px;
+  :hover{
+    background-color: #ccc;
+  }
+`
+
 const Content = styled.div`
   width: 90%;
   margin: 0 auto;
