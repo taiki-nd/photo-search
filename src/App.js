@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import styled from 'styled-components';
 
 const App = () => {
 
@@ -7,10 +8,16 @@ const App = () => {
   const [query, setQuery] = useState('cat'); //検索されている文字列の保持
 
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <Content>
+      </Content>
+    </>
   );
 }
+
+const Content = styled.div`
+  width: 90%;
+  margin: 0 auto;
+`
 
 export default App;
