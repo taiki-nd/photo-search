@@ -9,7 +9,15 @@ const App = () => {
 
   return (
     <>
+      <header>
+        <h1>PHOTO-SEARCH</h1>
+      </header>
       <Content>
+        <input
+          type="text"
+          onChange={(e) => setText(e.target.value)}
+          value={text}/>
+        <button type="submit">search...</button>
       </Content>
     </>
   );
