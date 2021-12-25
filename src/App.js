@@ -41,10 +41,10 @@ const App = () => {
         
         <Photos>
           {images.map(image => (
-            <div key={image.id}>
+            <Card key={image.id}>
               <Photo src={image.urls.regular} alt=''/>
               <p>{image.alt_description}</p>
-            </div>
+            </Card>
           ))}
         </Photos>
       </Content>
@@ -82,8 +82,11 @@ const Content = styled.div`
 
 const Photos = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
+`
+const Card = styled.div`
+  width: 300px;
 `
 
 const Photo = styled.img`
