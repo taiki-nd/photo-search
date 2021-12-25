@@ -28,7 +28,7 @@ const App = () => {
   return (
     <>
       <header>
-        <h1>PHOTO-SEARCH</h1>
+        <Title>PHOTO-SEARCH</Title>
       </header>
       <Content>
         <Form>
@@ -51,6 +51,11 @@ const App = () => {
     </>
   );
 }
+
+const Title = styled.h1`
+  margin-left: 5%;
+  letter-spacing: 5px;
+`
 
 const Form = styled.div`
   width: fit-content;
