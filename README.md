@@ -16,4 +16,4 @@ reactで作成した写真検索のSPAです。
 2. "search..."をクリック
 
 [![Image from Gyazo](https://i.gyazo.com/a108bae075a1512d5fd4215fda760b73.png)](https://gyazo.com/a108bae075a1512d5fd4215fda760b73)
-[![Image from Gyazo](https://i.gyazo.com/df35b35b5a1c3b40de3072e2bb735c8b.png)](https://gyazo.com/df35b35b5a1c3b40de3072e2bb735c8b)
+[![Image from Gyazo](https://i.gyazo.com/fa8da400eddc8b84f8492d63c885e83c.png)](https://gyazo.com/fa8da400eddc8b84f8492d63c885e83c)
