@@ -7,6 +7,13 @@ const App = () => {
   const [text, setText] = useState(''); //検索バーに入れる文字列の管理
   const [query, setQuery] = useState('cat'); //検索されている文字列の保持
 
+  const onClickSearch = (e) => {
+    e.preventDefault(); //ページ遷移の防止（SPAのため）
+    setQuery(text);
+    setText('');
+    console.log(`${text}でonClickSearchが呼ばれました`)
+  }
+
   return (
     <>
       <header>
@@ -17,7 +24,7 @@ const App = () => {
           type="text"
           onChange={(e) => setText(e.target.value)}
           value={text}/>
-        <button type="submit">search...</button>
+        <button type="submit" onClick={onClickSearch}>search...</button>
       </Content>
     </>
   );
