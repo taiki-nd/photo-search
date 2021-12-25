@@ -31,11 +31,22 @@ const App = () => {
         <h1>PHOTO-SEARCH</h1>
       </header>
       <Content>
-        <input
-          type="text"
-          onChange={(e) => setText(e.target.value)}
-          value={text}/>
-        <button type="submit" onClick={onClickSearch}>search...</button>
+        <Form>
+          <InputSearch
+            type="text"
+            onChange={(e) => setText(e.target.value)}
+            value={text}/>
+          <Btn type="submit" onClick={onClickSearch}>search...</Btn>
+        </Form>
+        
+        <Photos>
+          {images.map(image => (
+            <div key={image.id}>
+              <Photo src={image.urls.regular} alt=''/>
+              <p>{image.alt_description}</p>
+            </div>
+          ))}
+        </Photos>
       </Content>
     </>
   );
@@ -44,6 +55,17 @@ const App = () => {
 const Content = styled.div`
   width: 90%;
   margin: 0 auto;
+`
+
+const Photos = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+`
+
+const Photo = styled.img`
+  width 300px;
+  height: auto;
 `
 
 export default App;
