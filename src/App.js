@@ -1,21 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
+import { Unsplash } from './components/unspash';
 
 const App = () => {
 
-  const [images_u, setImages_u] = useState([]); //何の写真が表示されているか管理(unsplash)
   const [images_p, setImages_p] = useState([]); //何の写真が表示されているか管理(pixabay)
   const [text, setText] = useState(''); //検索バーに入れる文字列の管理
   const [query, setQuery] = useState(''); //検索されている文字列の保持
 
   useEffect(() => {
     console.log('useEffectが走りました。')
-    fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${process.env.REACT_APP_CLIENT_ID_UNSPLASH}`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        setImages_u(data.results)
-      })
       fetch(`https://pixabay.com/api/?q=${query}&key=${process.env.REACT_APP_CLIENT_ID_PIXABAY}`)
       .then(response => response.json())
       .then(data => {
@@ -45,39 +39,19 @@ const App = () => {
             value={text}/>
           <Btn type="submit" onClick={onClickSearch}>search...</Btn>
         </Form>
+          <Unsplash
+            query={query}
+          />
 
-        {images_u < 1 ? 
-
-          <LetSearch>検索してください</LetSearch>
-        
-        :
-          <>
-            <LetSearch>{query}の検索結果form unsplash</LetSearch>
-            <Photos>
-              {images_u.map(image => (
-                <Card key={image.id}>
-                  <Photo src={image.urls.regular} alt=''/>
-                  <p>{image.alt_description}</p>
-                </Card>
-              ))}
-              {console.log(images_u)}
-            </Photos>
-
-            <LetSearch>{query}の検索結果form pixabay</LetSearch>
-            <Photos>
-              {images_p.map(image => (
-                <Card key={image.id}>
-                  <Photo src={image.largeImageURL} alt=''/>
-                  <p>{image.alt_description}</p>
-                </Card>
-              ))}
-              {console.log(images_p)}
-            </Photos>
-          </>
-
-        }
-
-
+          <LetSearch>{query}の検索結果form pixabay</LetSearch>
+          <Photos>
+            {images_p.map(image => (
+              <Card key={image.id}>
+                <Photo src={image.largeImageURL} alt=''/>
+                <p>{image.alt_description}</p>
+              </Card>
+            ))}
+          </Photos>
       </Content>
     </>
   );
