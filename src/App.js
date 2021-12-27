@@ -9,25 +9,20 @@ const App = () => {
   const [query, setQuery] = useState(''); //検索されている文字列の保持
 
   useEffect(() => {
-    console.log('unsplashのuseEffectが走りました。')
+    console.log('useEffectが走りました。')
     fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${process.env.REACT_APP_CLIENT_ID_UNSPLASH}`)
       .then(response => response.json())
       .then(data => {
         console.log(data)
         setImages_u(data.results)
       })
-  }, [query])//queryが変わった時にuseEffectを走らせる
-
-  useEffect(() => {
-    console.log('pixabayのuseEffectが走りました。')
-    fetch(`https://pixabay.com/api/?q=${query}&key=${process.env.REACT_APP_CLIENT_ID_PIXABAY}`)
+      fetch(`https://pixabay.com/api/?q=${query}&key=${process.env.REACT_APP_CLIENT_ID_PIXABAY}`)
       .then(response => response.json())
       .then(data => {
         console.log(data)
         setImages_p(data.hits)
       })
-  }, [query])
-
+  }, [query])//queryが変わった時にuseEffectを走らせる
 
   const onClickSearch = (e) => {
     e.preventDefault(); //ページ遷移の防止（SPAのため）
