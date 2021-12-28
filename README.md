@@ -9,7 +9,7 @@ Photo-Search
 # アプリケーション概要
 
 reactで作成した写真検索のSPAです。
-[unsplash](https://unsplash.com/)のAPIを用いています。
+[unsplash](https://unsplash.com/)及び[pixabay](https://pixabay.com/ja/)のAPIを用いています。
 
 # 利用方法
 1. 検索窓に検索したい単語を入力
