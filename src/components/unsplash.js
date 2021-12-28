@@ -23,7 +23,7 @@ import styled from 'styled-components';
       <Photos>
         {images_u.map(image => (
           <Card key={image.id}>
-            <Photo src={image.urls.regular} alt=''/>
+            <a href={image.links.html} target="_blank"><Photo src={image.urls.regular} alt=''/></a>
           </Card>
         ))}
         {console.log(images_u)}

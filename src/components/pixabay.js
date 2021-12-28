@@ -22,7 +22,7 @@ export const Pixabay = (props) => {
       <Photos>
         {images_p.map(image => (
           <Card key={image.id}>
-            <Photo src={image.largeImageURL} alt=''/>
+            <a href={image.pageURL} target="_blank"><Photo src={image.largeImageURL} alt=''/></a>
             <p>{image.alt_description}</p>
           </Card>
         ))}
