@@ -24,7 +24,6 @@ import styled from 'styled-components';
         {images_u.map(image => (
           <Card key={image.id}>
             <Photo src={image.urls.regular} alt=''/>
-            <p>{image.alt_description}</p>
           </Card>
         ))}
         {console.log(images_u)}
