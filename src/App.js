@@ -30,13 +30,22 @@ const App = () => {
           <Btn type="submit" onClick={onClickSearch}>search...</Btn>
         </Form>
 
-        <Unsplash
-          query={query}
-        />
+        {query == '' ?
 
-        <Pixabay
-          query={query}
-        />
+        <LetSearch>検索してください</LetSearch>
+
+        :
+        
+        <>
+          <Unsplash
+            query={query}
+          />
+
+          <Pixabay
+            query={query}
+          />
+        </>
+        }
 
       </Content>
     </>
@@ -56,7 +65,7 @@ const Content = styled.div`
   width: 90%;
   margin: 0 auto;
  `
-  
+
 const InputSearch = styled.input`
   width: 600px;
   padding: 10px;
@@ -68,6 +77,12 @@ const Btn = styled.button`
   :hover{
     background-color: #ccc;
   }
+`
+
+const LetSearch = styled.p`
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 `
 
 export default App;
