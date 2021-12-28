@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import { BrowserRouter, Route } from 'react-router-dom';
 import { Unsplash } from './components/unsplash';
 import { Pixabay } from './components/pixabay';
 
@@ -8,6 +7,7 @@ const App = () => {
 
   const [text, setText] = useState(''); //検索バーに入れる文字列の管理
   const [query, setQuery] = useState(''); //検索されている文字列の保持
+  const [view, setView] = useState(1);
 
   const onClickSearch = (e) => {
     e.preventDefault(); //ページ遷移の防止（SPAのため）
@@ -15,6 +15,14 @@ const App = () => {
     setText('');
     console.log(`${text}でonClickSearchが呼ばれました`)
     console.log(query)
+  }
+
+  const onClickDisplayUnsplash = () => {
+    setView(1);
+  }
+
+  const onClickDisplayPixabay = () => {
+    setView(2);
   }
 
   return (
@@ -38,13 +46,21 @@ const App = () => {
         :
         
         <>
-          <Unsplash
-            query={query}
-          />
+          <button onClick={() => onClickDisplayUnsplash(1)}>Unsplash</button>
+          <button onClick={() => onClickDisplayPixabay(2)}>pixabay</button>
 
-          <Pixabay
-            query={query}
-          />
+          {view === 1 ?
+            <Unsplash
+              query={query}
+            />
+          : view === 2 ?
+            <Pixabay
+              query={query}
+            />
+          :
+          ''
+          }
+         
         </>
         }
 
