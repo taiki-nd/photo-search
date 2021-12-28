@@ -46,8 +46,20 @@ const App = () => {
         :
         
         <>
-          <button onClick={() => onClickDisplayUnsplash(1)}>Unsplash</button>
-          <button onClick={() => onClickDisplayPixabay(2)}>pixabay</button>
+          {view === 1 ?
+            <>
+              <BtnSelectorNow onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelectorNow>
+              <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
+            </>
+          : view === 2 ?
+            <>
+              <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
+              <BtnSelectorNow onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelectorNow>
+            </>
+          :
+            ''
+          
+          } 
 
           {view === 1 ?
             <Unsplash
@@ -58,7 +70,7 @@ const App = () => {
               query={query}
             />
           :
-          ''
+            ''
           }
          
         </>
@@ -91,6 +103,24 @@ const InputSearch = styled.input`
 
 const Btn = styled.button`
   padding: 10px;
+  margin: 0 10px;
+  :hover{
+    background-color: #ccc;
+  }
+`
+
+const BtnSelector = styled.button`
+  padding: 10px;
+  margin: 0 10px;
+  :hover{
+    background-color: #ccc;
+  }
+`
+
+const BtnSelectorNow = styled.button`
+  padding: 10px;
+  margin: 0 10px;
+  background-color: #33ffff;
   :hover{
     background-color: #ccc;
   }
