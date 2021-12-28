@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { Unsplash } from './components/unsplash';
 import { Pixabay } from './components/pixabay';
 
