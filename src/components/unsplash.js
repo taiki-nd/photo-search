@@ -54,5 +54,6 @@ const Card = styled.div`
 
 const Photo = styled.img`
   width 300px;
-  height: auto;
+  height: 300px;
+  object-fit: cover;
 `
