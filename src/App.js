@@ -27,9 +27,9 @@ const App = () => {
 
   return (
     <>
-      <header>
+      <Header>
         <Title>PHOTO-SEARCH</Title>
-      </header>
+      </Header>
       <Content>
         <Form>
           <InputSearch
@@ -81,19 +81,28 @@ const App = () => {
   );
 }
 
+const Header = styled.header`
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
+`
+
 const Title = styled.h1`
   margin-left: 5%;
   letter-spacing: 5px;
+  color: #ffffff;
+`
+
+const Content = styled.div`
+  width: 90%;
+  margin: 100px auto 0;
 `
 
 const Form = styled.div`
   width: fit-content;
   margin: 25px auto;
 `
-const Content = styled.div`
-  width: 90%;
-  margin: 0 auto;
- `
 
 const InputSearch = styled.input`
   width: 600px;
@@ -120,7 +129,8 @@ const BtnSelector = styled.button`
 const BtnSelectorNow = styled.button`
   padding: 10px;
   margin: 0 10px;
-  background-color: #33ffff;
+  color: #ffffff;
+  background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
   :hover{
     background-color: #ccc;
   }
