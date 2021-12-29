@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Unsplash } from './components/unsplash';
 import { Pixabay } from './components/pixabay';
+import back from './images/back.jpg';
 
 const App = () => {
 
@@ -30,6 +31,7 @@ const App = () => {
       <Header>
         <Title>PHOTO-SEARCH</Title>
       </Header>
+
       <Content>
         <Form>
           <InputSearch
@@ -115,7 +117,12 @@ const Btn = styled.button`
   margin: 0 10px;
   border-radius: 999px;
   :hover{
-    background-color: #ccc;
+    background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
+    color: #ffffff;
+  }
+  :active{
+    background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
+    color: #ffffff;
   }
 `
 
@@ -124,7 +131,12 @@ const BtnSelector = styled.button`
   margin: 0 10px;
   border-radius: 999px;
   :hover{
-    background-color: #ccc;
+    background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
+    color: #ffffff;
+  }
+  :active{
+    background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
+    color: #ffffff;
   }
 `
 
