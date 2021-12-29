@@ -113,6 +113,7 @@ const InputSearch = styled.input`
 const Btn = styled.button`
   padding: 10px;
   margin: 0 10px;
+  border-radius: 999px;
   :hover{
     background-color: #ccc;
   }
@@ -121,6 +122,7 @@ const Btn = styled.button`
 const BtnSelector = styled.button`
   padding: 10px;
   margin: 0 10px;
+  border-radius: 999px;
   :hover{
     background-color: #ccc;
   }
@@ -129,6 +131,7 @@ const BtnSelector = styled.button`
 const BtnSelectorNow = styled.button`
   padding: 10px;
   margin: 0 10px;
+  border-radius: 999px;
   color: #ffffff;
   background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
   :hover{
