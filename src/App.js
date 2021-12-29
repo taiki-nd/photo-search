@@ -102,12 +102,13 @@ const Content = styled.div`
 `
 
 const Form = styled.div`
-  width: fit-content;
   margin: 25px auto;
+  display: flex;
+  justify-content: center;
 `
 
 const InputSearch = styled.input`
-  width: 600px;
+  width: 50%;
   padding: 10px;
   margin: 0 10px;
 `
