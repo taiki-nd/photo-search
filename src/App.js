@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Unsplash } from './components/unsplash';
 import { Pixabay } from './components/pixabay';
 import { Kaboompics } from './components/kaboompics'
+import { NegativeSpace } from './components/negativespace'
 import BackImage from './images/back.jpg';
 
 const App = () => {
@@ -33,6 +34,10 @@ const App = () => {
 
   const onClickDisplayKaboompics = () => {
     setView(3);
+  }
+
+  const onClickDisplayNegativespace = () => {
+    setView(4);
   }
 
   return (
@@ -68,6 +73,7 @@ const App = () => {
                   <BtnSelectorNow onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelectorNow>
                   <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
                   <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
+                  <BtnSelector onClick={() => onClickDisplayNegativespace(4)}>negative space</BtnSelector>
                 </>
               : view === 2 ?
                 <>
@@ -75,6 +81,7 @@ const App = () => {
                   <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
                   <BtnSelectorNow onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelectorNow>
                   <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
+                  <BtnSelector onClick={() => onClickDisplayNegativespace(4)}>negative space</BtnSelector>
                 </>
               : view === 3 ?
                 <>
@@ -82,7 +89,16 @@ const App = () => {
                   <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
                   <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
                   <BtnSelectorNow onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelectorNow>
+                  <BtnSelector onClick={() => onClickDisplayNegativespace(4)}>negative space</BtnSelector>
                 </>
+              : view === 4 ?
+              <>
+                <SearchWord>{`"${query}"の検索結果`}</SearchWord>
+                <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
+                <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
+                <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
+                <BtnSelectorNow onClick={() => onClickDisplayNegativespace(4)}>negative space</BtnSelectorNow>
+              </>
               :
                 ''
               
@@ -99,6 +115,10 @@ const App = () => {
                 />
               : view === 3 ?
                 <Kaboompics 
+                  query={query}
+                />
+              : view === 4 ?
+                <NegativeSpace 
                   query={query}
                 />
               :
