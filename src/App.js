@@ -34,10 +34,9 @@ const App = () => {
     <>
       <Back>
       <Header>
-        <Title>PHOTO-SEARCH</Title>
-      </Header>
-
-      <Content>
+        <TitleDiv>
+          <Title>PHOTO<br />SEARCH</Title>
+        </TitleDiv>
         <Form>
           <InputSearch
             type="text"
@@ -45,6 +44,9 @@ const App = () => {
             value={text}/>
           <Btn type="submit" onClick={onClickSearch}>search...</Btn>
         </Form>
+      </Header>
+
+      <Content>
 
         {query == '' ?
 
@@ -106,6 +108,9 @@ const Back = styled.div`
 `
 
 const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   position: fixed;
   top: 0;
@@ -113,26 +118,25 @@ const Header = styled.header`
   background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
 `
 
-const Title = styled.h1`
+const TitleDiv = styled.div`
   margin-left: 5%;
-  letter-spacing: 5px;
-  color: #ffffff;
 `
 
-const Content = styled.div`
-  width: 90%;
-  padding-top: 50px;
-  margin: 50px auto 0;
+const Title = styled.p`
+  letter-spacing: 5px;
+  color: #ffffff;
+  font-weight: bold;
 `
 
 const Form = styled.div`
-  margin: 25px auto;
+  margin: 10px 0 ;
+  margin-right: 5%;
   display: flex;
   justify-content: center;
 `
 
 const InputSearch = styled.input`
-  width: 50%;
+  width: 100%;
   padding: 10px;
   margin: 0 10px;
 `
@@ -150,6 +154,12 @@ const Btn = styled.button`
     background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
     color: #ffffff;
   }
+`
+
+const Content = styled.div`
+  width: 90%;
+  padding-top: 50px;
+  margin: 50px auto 0;
 `
 
 const BtnSelector = styled.button`
