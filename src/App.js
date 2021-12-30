@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Unsplash } from './components/unsplash';
 import { Pixabay } from './components/pixabay';
-import back from './images/back.jpg';
+import { Kaboompics } from './components/kaboompics'
 
 const App = () => {
 
@@ -24,6 +24,10 @@ const App = () => {
 
   const onClickDisplayPixabay = () => {
     setView(2);
+  }
+
+  const onClickDisplayKaboompics = () => {
+    setView(3);
   }
 
   return (
@@ -53,11 +57,19 @@ const App = () => {
             <>
               <BtnSelectorNow onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelectorNow>
               <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
+              <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
             </>
           : view === 2 ?
             <>
               <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
               <BtnSelectorNow onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelectorNow>
+              <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
+            </>
+          : view === 3 ?
+            <>
+              <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
+              <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
+              <BtnSelectorNow onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelectorNow>
             </>
           :
             ''
@@ -70,6 +82,10 @@ const App = () => {
             />
           : view === 2 ?
             <Pixabay
+              query={query}
+            />
+          : view === 3 ?
+            <Kaboompics 
               query={query}
             />
           :
