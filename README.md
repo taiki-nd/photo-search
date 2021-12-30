@@ -10,7 +10,7 @@ Photo-Search
 
 reactで作成した写真検索のSPAです。
 [unsplash](https://unsplash.com/)及び[pixabay](https://pixabay.com/ja/)のAPIを用いています。
-react-iframeを利用してkaboompicsのwebサイトも埋め込んであります。
+react-iframeを利用してkaboompics, Negative Spaceのwebサイトも埋め込んであります。
 
 # 利用方法
 1. 検索窓に検索したい単語を入力
@@ -31,3 +31,6 @@ Pixabay
 Kaboompics
 
 [![Image from Gyazo](https://i.gyazo.com/e932d3e6a338044ace7ad9c0a8adf123.png)](https://gyazo.com/e932d3e6a338044ace7ad9c0a8adf123)
+
+Negative space
+[![Image from Gyazo](https://i.gyazo.com/de082e332e2e5ae72d033624a3f63daa.png)](https://gyazo.com/de082e332e2e5ae72d033624a3f63daa)
