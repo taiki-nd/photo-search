@@ -11,6 +11,10 @@ const App = () => {
   const [query, setQuery] = useState(''); //検索されている文字列の保持
   const [view, setView] = useState(1);
 
+  const onClickReload = () => {
+    window.location.reload();
+  }
+
   const onClickSearch = (e) => {
     e.preventDefault(); //ページ遷移の防止（SPAのため）
     setQuery(text);
@@ -35,7 +39,7 @@ const App = () => {
     <>
       <Back>
       <Header>
-        <TitleDiv>
+        <TitleDiv onClick={() => onClickReload()}>
           <Title>PHOTO<br />SEARCH</Title>
         </TitleDiv>
         <Form>
@@ -60,18 +64,21 @@ const App = () => {
             <LeftBar>
               {view === 1 ?
                 <>
+                  <SearchWord>{`"${query}"の検索結果`}</SearchWord>
                   <BtnSelectorNow onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelectorNow>
                   <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
                   <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
                 </>
               : view === 2 ?
                 <>
+                  <SearchWord>{`"${query}"の検索結果`}</SearchWord>
                   <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
                   <BtnSelectorNow onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelectorNow>
                   <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
                 </>
               : view === 3 ?
                 <>
+                  <SearchWord>{`"${query}"の検索結果`}</SearchWord>
                   <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
                   <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
                   <BtnSelectorNow onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelectorNow>
@@ -130,6 +137,7 @@ const Header = styled.header`
 
 const TitleDiv = styled.div`
   margin-left: 5%;
+  cursor: pointer;
 `
 
 const Title = styled.p`
@@ -147,7 +155,7 @@ const Form = styled.div`
 
 const InputSearch = styled.input`
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 5px;
   margin: 0 10px;
 `
 
@@ -186,6 +194,11 @@ const LeftBar = styled.div`
 const RightBar = styled.div`
   width: 80%;
   margin-left: 20%;
+`
+
+const SearchWord = styled.p`
+  text-align: center;
+  color: #fff;
 `
 
 const BtnSelector = styled.div`
