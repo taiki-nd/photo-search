@@ -105,6 +105,7 @@ const App = () => {
 
 const Back = styled.div`
   background-color: #2b4251;
+  min-height: 100vh;
 `
 
 const Header = styled.header`
@@ -190,7 +191,8 @@ const BtnSelectorNow = styled.button`
 `
 
 const LetSearch = styled.p`
-  height: 150vh;
+  color: #ffffff;
+  margin-top: 40vh;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;

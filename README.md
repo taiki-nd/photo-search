@@ -10,6 +10,7 @@ Photo-Search
 
 reactで作成した写真検索のSPAです。
 [unsplash](https://unsplash.com/)及び[pixabay](https://pixabay.com/ja/)のAPIを用いています。
+react-iframeを利用してkaboompicsのwebサイトも埋め込んであります。
 
 # 利用方法
 1. 検索窓に検索したい単語を入力
