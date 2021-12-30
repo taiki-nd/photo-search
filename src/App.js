@@ -190,6 +190,7 @@ const BtnSelectorNow = styled.button`
 `
 
 const LetSearch = styled.p`
+  height: 150vh;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
