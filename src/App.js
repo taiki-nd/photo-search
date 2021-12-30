@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Unsplash } from './components/unsplash';
 import { Pixabay } from './components/pixabay';
 import { Kaboompics } from './components/kaboompics'
+import BackImage from './images/back.jpg';
 
 const App = () => {
 
@@ -50,7 +51,7 @@ const App = () => {
 
         {query == '' ?
 
-        <LetSearch>検索してください</LetSearch>
+        <LetSearch>高品質な商用利用写真を見つける</LetSearch>
 
         :
         
@@ -104,8 +105,12 @@ const App = () => {
 }
 
 const Back = styled.div`
-  background-color: #2b4251;
   min-height: 100vh;
+  background-image: url(${BackImage});
+  background-repeat:  no-repeat;
+  background-position: center;
+  background-size: cover; 
+  background-attachment: fixed;
 `
 
 const Header = styled.header`
@@ -193,7 +198,7 @@ const BtnSelectorNow = styled.button`
 const LetSearch = styled.p`
   color: #ffffff;
   margin-top: 40vh;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
 `
