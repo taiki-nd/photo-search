@@ -28,6 +28,7 @@ const App = () => {
 
   return (
     <>
+      <Back>
       <Header>
         <Title>PHOTO-SEARCH</Title>
       </Header>
@@ -79,14 +80,20 @@ const App = () => {
         }
 
       </Content>
+      </Back>
     </>
   );
 }
+
+const Back = styled.div`
+  background-color: #2b4251;
+`
 
 const Header = styled.header`
   width: 100%;
   position: fixed;
   top: 0;
+  border-bottom: 1px solid #ffffff;
   background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
 `
 
@@ -98,7 +105,8 @@ const Title = styled.h1`
 
 const Content = styled.div`
   width: 90%;
-  margin: 100px auto 0;
+  padding-top: 50px;
+  margin: 50px auto 0;
 `
 
 const Form = styled.div`
@@ -117,6 +125,7 @@ const Btn = styled.button`
   padding: 10px;
   margin: 0 10px;
   border-radius: 999px;
+  border: 1px solid #ffffff;
   :hover{
     background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
     color: #ffffff;
@@ -131,6 +140,7 @@ const BtnSelector = styled.button`
   padding: 10px;
   margin: 0 10px;
   border-radius: 999px;
+  border: 1px solid #ffffff;
   :hover{
     background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
     color: #ffffff;
@@ -145,6 +155,7 @@ const BtnSelectorNow = styled.button`
   padding: 10px;
   margin: 0 10px;
   border-radius: 999px;
+  border: 1px solid #ffffff;
   color: #ffffff;
   background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
   :hover{
