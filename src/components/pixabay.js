@@ -18,7 +18,7 @@ export const Pixabay = (props) => {
 
   return (
     <>
-      <LetSearch>{query}の検索結果form pixabay</LetSearch>
+      <LetSearch>"{query}"の検索結果 form pixabay</LetSearch>
       <Photos>
         {images_p.map(image => (
           <Card key={image.id}>
@@ -35,6 +35,7 @@ const LetSearch = styled.p`
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+  color: #ffffff;
 `
 
 const Content = styled.div`

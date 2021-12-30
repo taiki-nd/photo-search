@@ -19,7 +19,7 @@ import styled from 'styled-components';
 
   return (
     <>
-      <LetSearch>{query}の検索結果form unsplash</LetSearch>
+      <LetSearch>"{query}"の検索結果 form unsplash</LetSearch>
       <Photos>
         {images_u.map(image => (
           <Card key={image.id}>
@@ -36,6 +36,7 @@ const LetSearch = styled.p`
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+  color: #ffffff;
 `
 
 const Content = styled.div`
