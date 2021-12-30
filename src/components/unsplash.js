@@ -19,7 +19,6 @@ import styled from 'styled-components';
 
   return (
     <>
-      <LetSearch>"{query}"の検索結果 form unsplash</LetSearch>
       <Photos>
         {images_u.map(image => (
           <Card key={image.id}>
@@ -32,13 +31,6 @@ import styled from 'styled-components';
   )
 }
 
-const LetSearch = styled.p`
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  color: #ffffff;
-`
-
 const Content = styled.div`
   width: 90%;
   margin: 0 auto;
@@ -46,7 +38,7 @@ const Content = styled.div`
 
 const Photos = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 `
 const Card = styled.div`
