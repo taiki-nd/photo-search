@@ -51,50 +51,54 @@ const App = () => {
 
         {query == '' ?
 
-        <LetSearch>高品質な商用利用写真を見つける</LetSearch>
+        <LetSearch>無料で高品質な<br />商用利用写真を見つける</LetSearch>
 
         :
         
         <>
-          {view === 1 ?
-            <>
-              <BtnSelectorNow onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelectorNow>
-              <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
-              <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
-            </>
-          : view === 2 ?
-            <>
-              <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
-              <BtnSelectorNow onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelectorNow>
-              <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
-            </>
-          : view === 3 ?
-            <>
-              <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
-              <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
-              <BtnSelectorNow onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelectorNow>
-            </>
-          :
-            ''
-          
-          } 
-
-          {view === 1 ?
-            <Unsplash
-              query={query}
-            />
-          : view === 2 ?
-            <Pixabay
-              query={query}
-            />
-          : view === 3 ?
-            <Kaboompics 
-              query={query}
-            />
-          :
-            ''
-          }
-         
+          <Result>
+            <LeftBar>
+              {view === 1 ?
+                <>
+                  <BtnSelectorNow onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelectorNow>
+                  <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
+                  <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
+                </>
+              : view === 2 ?
+                <>
+                  <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
+                  <BtnSelectorNow onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelectorNow>
+                  <BtnSelector onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelector>
+                </>
+              : view === 3 ?
+                <>
+                  <BtnSelector onClick={() => onClickDisplayUnsplash(1)}>Unsplash</BtnSelector>
+                  <BtnSelector onClick={() => onClickDisplayPixabay(2)}>pixabay</BtnSelector>
+                  <BtnSelectorNow onClick={() => onClickDisplayKaboompics(3)}>kaboompics</BtnSelectorNow>
+                </>
+              :
+                ''
+              
+              } 
+            </LeftBar>
+            <RightBar>
+              {view === 1 ?
+                <Unsplash
+                  query={query}
+                />
+              : view === 2 ?
+                <Pixabay
+                  query={query}
+                />
+              : view === 3 ?
+                <Kaboompics 
+                  query={query}
+                />
+              :
+                ''
+              }
+            </RightBar>
+          </Result> 
         </>
         }
 
@@ -143,7 +147,7 @@ const Form = styled.div`
 
 const InputSearch = styled.input`
   width: 100%;
-  padding: 10px;
+  padding: 10px 0;
   margin: 0 10px;
 `
 
@@ -163,16 +167,33 @@ const Btn = styled.button`
 `
 
 const Content = styled.div`
-  width: 90%;
   padding-top: 50px;
   margin: 50px auto 0;
 `
 
-const BtnSelector = styled.button`
-  padding: 10px;
-  margin: 0 10px;
+const Result = styled.div`
+  margin: 0 auto;
+  display: flex;
+`
+
+const LeftBar = styled.div`
+  width: 20%;
+  position: fixed;
+  overflow: auto;
+`
+
+const RightBar = styled.div`
+  width: 80%;
+  margin-left: 20%;
+`
+
+const BtnSelector = styled.div`
+  padding: 10px 0;
+  margin: 10px;
   border-radius: 999px;
   border: 1px solid #ffffff;
+  background-color: #ccc;
+  text-align: center;
   :hover{
     background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
     color: #ffffff;
@@ -183,12 +204,13 @@ const BtnSelector = styled.button`
   }
 `
 
-const BtnSelectorNow = styled.button`
-  padding: 10px;
-  margin: 0 10px;
+const BtnSelectorNow = styled.div`
+  padding: 10px 0;
+  margin: 10px;
   border-radius: 999px;
   border: 1px solid #ffffff;
   color: #ffffff;
+  text-align: center;
   background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
   :hover{
     background-color: #ccc;
