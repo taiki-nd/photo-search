@@ -8,7 +8,6 @@ export const Kaboompics = (props) => {
 
   return(
     <>
-      <LetSearch>"{query}"の検索結果 form kaboompics</LetSearch>
       <IframeDiv>
         <Iframe
           id = 'kaboompics'
@@ -20,13 +19,6 @@ export const Kaboompics = (props) => {
     </>
   )
 }
-
-const LetSearch = styled.p`
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  color: #ffffff;
-`
 
 const IframeDiv = styled.div`
   padding-top: 50px;
