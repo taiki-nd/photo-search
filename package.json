@@ -1,4 +1,4 @@
-{
+  {  
   "name": "photo-search",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +16,7 @@
     "yarn": "^1.22.17"
   },
   "scripts": {
+    "setup": "yarn",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
