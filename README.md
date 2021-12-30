@@ -22,11 +22,11 @@ Top
 
 Unsplash
 
-[![Image from Gyazo](https://i.gyazo.com/9a157f2de8b9bd876e9e61945f656146.png)](https://gyazo.com/9a157f2de8b9bd876e9e61945f656146)
+[![Image from Gyazo](https://i.gyazo.com/dcb92abe73e6525fde19e8346a409c91.png)](https://gyazo.com/dcb92abe73e6525fde19e8346a409c91)
 
 Pixabay
 
-[![Image from Gyazo](https://i.gyazo.com/78186279c7ab992669ce5aad438f42e7.png)](https://gyazo.com/78186279c7ab992669ce5aad438f42e7)
+[![Image from Gyazo](https://i.gyazo.com/64a62f5f470a41f1f64e7b04a2b0e37d.png)](https://gyazo.com/64a62f5f470a41f1f64e7b04a2b0e37d)
 
 Kaboompics
 
