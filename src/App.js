@@ -185,6 +185,7 @@ const Btn = styled.div`
   border-radius: 999px;
   border: 1px solid #ffffff;
   background-color: #91b3bc;
+  cursor: pointer;
   :hover{
     background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
     color: #ffffff;
@@ -228,6 +229,7 @@ const BtnSelector = styled.div`
   border: 1px solid #ffffff;
   background-color: #91b3bc;
   text-align: center;
+  cursor: pointer;
   :hover{
     background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
     color: #ffffff;
@@ -245,6 +247,7 @@ const BtnSelectorNow = styled.div`
   border: 1px solid #ffffff;
   color: #ffffff;
   text-align: center;
+  cursor: pointer;
   background: -webkit-linear-gradient(45deg, #91b3bc, #5b7d87, #45415e, #2b4251, #2e323c);
   :hover{
     background-color: #ccc;
