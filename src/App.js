@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
+import media from "styled-media-query";
 import { Unsplash } from './components/unsplash';
 import { Pixabay } from './components/pixabay';
 import { Kaboompics } from './components/kaboompics';
@@ -206,17 +207,28 @@ const Content = styled.div`
 const Result = styled.div`
   margin: 0 auto;
   display: flex;
+  ${media.lessThan("medium")`
+    flex-direction: column;
+  `}
 `
 
 const LeftBar = styled.div`
   width: 20%;
   position: fixed;
   overflow: auto;
+  ${media.lessThan("medium")`
+    position: static;
+    width: 100%;
+  `}
 `
 
 const RightBar = styled.div`
   width: 80%;
   margin-left: 20%;
+  ${media.lessThan("medium")`
+    width: 100%;
+    margin: 25px auto;
+  `}
 `
 
 const SearchWord = styled.p`
