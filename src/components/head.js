@@ -22,6 +22,9 @@ export const Head = () => {
         <meta property="og:description" content="無料で高品質な商用利用可能の写真を探す" />
         <meta property="og:site_name" content="Photo Search" />
         <meta property="og:image" content="https://raw.githubusercontent.com/taiki-nd/photo-search/master/src/images/back.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Kii_Program" />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/taiki-nd/photo-search/master/src/images/back.jpg" />
       </Helmet>
     </>
   )
