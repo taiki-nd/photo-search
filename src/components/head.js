@@ -1,12 +1,15 @@
-import Reeact from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const Head = () => {
+export const Head = () => {
 
-  return(
-    <Helmet>
-      
-    </Helmet>
+  return (
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Photo Search</title>
+      </Helmet>
+    </>
   )
 
 }

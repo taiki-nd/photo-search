@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Unsplash } from './components/unsplash';
 import { Pixabay } from './components/pixabay';
-import { Kaboompics } from './components/kaboompics'
-import { NegativeSpace } from './components/negativespace'
+import { Kaboompics } from './components/kaboompics';
+import { NegativeSpace } from './components/negativespace';
 import BackImage from './images/back.jpg';
+import { Head } from './components/head';
 
 const App = () => {
 
@@ -42,6 +43,7 @@ const App = () => {
 
   return (
     <>
+      <Head />
       <Back>
       <Header>
         <TitleDiv onClick={() => onClickReload()}>
