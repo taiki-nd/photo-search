@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
+import media from "styled-media-query";
 
  export const Unsplash = (props) => {
 
@@ -38,8 +39,12 @@ const Content = styled.div`
 
 const Photos = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
+  place-items: center;
+  ${media.lessThan("medium")`
+    flex-direction: column;
+  `}
 `
 const Card = styled.div`
   width: 300px;
