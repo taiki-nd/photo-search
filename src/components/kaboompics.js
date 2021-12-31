@@ -23,4 +23,5 @@ export const Kaboompics = (props) => {
 const IframeDiv = styled.div`
   height: 100vh;
   width: 95%;
+  margin: 0 auto;
 `
