@@ -4,7 +4,8 @@ Photo-Search
 
 # URL
 
-デプロイしていません
+herokuでデプロイしました。
+https://photo-search-0517.herokuapp.com/
 
 # アプリケーション概要
 
